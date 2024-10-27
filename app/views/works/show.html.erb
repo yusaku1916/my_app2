@@ -1,0 +1,6 @@
+<p><%= @work.content %></p>
+<p><%= @work.deadline %></p>
+<p><%= @work.memo %></p>
+
+<p><%= link_to "編集", edit_work_path(@work) %></p>
+<p><%= link_to "削除", work_path(@work), data: { confirm: "本当に削除しますか？", method: :delete }, remote: true %></p>

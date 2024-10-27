@@ -1,0 +1,37 @@
+<h1>直近の〆切</h1>
+  <div class='row height-50per'>
+    <div class='col-12'>
+      <h2>明日〆切の課題</h2>
+      <% if @tomorrow.any? %>
+        <% @tomorrow.each do |work| %>
+          <h3><%= work.content %></h3>
+        <% end %>
+      <% else %>
+        <p class="placeholder">No tasks for tomorrow</p>
+      <% end %>
+    </div>
+
+  </div>
+  <div class='row height-30per'>
+    <div class='col-7 ran'>
+      <h2>明後日〆切の課題</h2>
+      <% if @day_after_tomorrow.any? %>
+        <% @day_after_tomorrow.each do |work| %>
+          <h4><%= work.content %></h4>
+        <% end %>
+      <% else %>
+        <p class="placeholder">No tasks for the day after tomorrow</p>
+      <% end %>
+    </div>
+    <div class='col-5 ran'>
+      <h2>明々後日〆切の課題</h2>
+      <% if @two_days_after_tomorrow.any? %>
+        <% @two_days_after_tomorrow.each do |work| %>
+          <h5><%= work.content %></h5>
+        <% end %>
+      <% else %>
+        <p class="placeholder">No tasks for two days after tomorrow</p>
+      <% end %>
+    </div>
+  </div>
+

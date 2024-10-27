@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .calendar-table {
+  width: 100%;
+  border-collapse: collapse; /* 枠線を一つにまとめる */
+}
+
+.calendar-table th, .calendar-table td {
+  border: 1px solid #ddd;
+  /* padding: 10px; */
+  text-align: center;
+  vertical-align: top;
+  width: 14.28%; /* 7列均等配分 */
+}
+
+.today {
+  background-color: #ffeb3b; /* 今日の日付の背景色 */
+}
+
+p{
+  font-size: 16px;
+  margin: 0;
+  margin-top: 10px; /* 段落の上にスペースを追加 */
+}
+
+.p-down{
+  font-size: 12px;
+}
+
+.day{
+  position: relative;
+} 
+
+
+
+.date{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.height-50per {
+  text-align: center;
+  min-height: 50%;
+  border: 2px solid #999; /* 枠線 */
+  border-radius: 10%; /* 角をなくす */
+  padding: 10px;
+  margin: 5px;
+}
+
+.height-30per {
+  min-height: 30%;
+  border: 0px solid #ddd; /* 枠線 */
+  border-radius: 0; /* 角をなくす */
+}
+
+.placeholder {
+  color: #ccc; /* プレースホルダーの色 */
+}
+
+.screen{
+  height: 500px;
+}
+
+.ran{
+  text-align: center;
+  border: 2px solid #999; /* 枠線 */
+  border-radius: 5%; /* 角をなくす */
+}
